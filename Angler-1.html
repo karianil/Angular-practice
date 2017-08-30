@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+    <script src="script.js"></script>
+	
+	
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope) {
+			$scope.firstname = "Anil";
+			$scope.lastname = "Kumar";
+		});
+	</script>
+
+  </head>
+  <body>
+    <input type = "text" ng-model = "name">
+    <h1>Hello {{name}}</h1>
+	
+	<div ng-app="myApp" ng-controller="myCtrl">
+		Name: <input type = "text" ng-model="firstname">
+		<h1>{{firstname}}</h1>
+	</div>
+
+  </body>
+</html>
+
+
+
+

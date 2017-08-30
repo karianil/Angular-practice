@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>guru99</title>
+	
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+	
+	<script type="test/javascript">
+		angular.module('app', []).controller('HelloWorldCtrl', function($scope){
+				$scope.message="Hello World"
+			})
+	</script>
+	
+</head>
+<body>
+	<h1 ng-controller="HelloWorldCtrl">{{message}}</h1>
+</body>
+</html>
