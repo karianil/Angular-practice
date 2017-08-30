@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html ng-app="myApp">
 <head>
-	<meta charset="UTF-8">
-	<title>guru99</title>
-	
-	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
 	
 	<script type="test/javascript">
-		angular.module('app', []).controller('HelloWorldCtrl', function($scope){
-				$scope.message="Hello World"
-			})
+		var firstctrl = angular.module('myApp', []);
+		firstctrl.controller('helloWorldCtrl', function($scope) {
+			$scope.msg = "Hello World";
+		});
+
+		var secondctrl = angular.module('myApp', []);
+		secondctrl.controller('myCtrl', function($scope) {
+			$scope.firstname = "Anil";
+			$scope.lastname = "Kumar";
+		});
 	</script>
 	
 </head>
 <body>
-	<h1 ng-controller="HelloWorldCtrl">{{message}}</h1>
+	<div ng-controller="myCtrl">
+		<h1>{{firstname}}</h1>
+	</div>
+	
+	<h1 ng-controller="helloWorldCtrl">{{msg}}</h1>
 </body>
 </html>
