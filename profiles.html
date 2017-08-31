@@ -7,10 +7,10 @@
 	<script src = "js/profiles.js"></script>
 </head>
 
-<body>
+<body ng-controller="profilesCtrl">
 	<div class="container-fluid col-md-3" >
 		<h1> sidebar </h1>
-		<ul class="list-group" ng-controller="profilesCtrl">
+		<ul class="list-group">
 			<li class="list-group-item" id="{{item.indexValue}}" ng-repeat="item in items" ng-click='sidebarButtonClick($event)'>{{ item.name }}</li>
 			<!--<li class="list-group-item">Deleted <span class="badge">5</span></li> -->
 		</ul>
@@ -26,14 +26,14 @@
 							<img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
 						</div>
 						<div class="col-sm-6 col-md-8">
-							<h4>Bhaumik Patel {{ }}</h4>
-							<cite title="San Francisco, USA">San Francisco, USA </cite>
+							<h4>{{ username }}</h4>
+							<cite title="San Francisco, USA">{{ address }} </cite>
 							<p>
-								email@example.com
+								{{ email }}
 								<br />
-								<a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+								<a href="http://www.jquery2dotnet.com">{{ url }}</a>
 								<br />
-								June 02, 1988
+								{{ dob }}
 							</p>
 						</div>
 					</div>
