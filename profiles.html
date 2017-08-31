@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+	<script src = "js/profiles.js"></script>
+</head>
+
+<body>
+	<div class="container-fluid col-md-3" >
+		<h1> sidebar </h1>
+		<ul class="list-group" ng-controller="profilesCtrl">
+			<li class="list-group-item" id="{{item.indexValue}}" ng-repeat="item in items" ng-click='sidebarButtonClick($event)'>{{ item.name }}</li>
+			<!--<li class="list-group-item">Deleted <span class="badge">5</span></li> -->
+		</ul>
+		
+	</div>
+	<div class="container-fluid col-md-9">
+		<h1> profile details </h1>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="well well-sm">
+					<div class="row">
+						<div class="col-sm-6 col-md-4">
+							<img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+						</div>
+						<div class="col-sm-6 col-md-8">
+							<h4>Bhaumik Patel {{ }}</h4>
+							<cite title="San Francisco, USA">San Francisco, USA </cite>
+							<p>
+								email@example.com
+								<br />
+								<a href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
+								<br />
+								June 02, 1988
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
