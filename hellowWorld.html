@@ -3,26 +3,35 @@
 <head>
 
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
-	
-	<script type="test/javascript">
-		var firstctrl = angular.module('myApp', []);
-		firstctrl.controller('helloWorldCtrl', function($scope) {
-			$scope.msg = "Hello World";
-		});
-
-		var secondctrl = angular.module('myApp', []);
-		secondctrl.controller('myCtrl', function($scope) {
-			$scope.firstname = "Anil";
-			$scope.lastname = "Kumar";
-		});
-	</script>
+	<script src = "js/helloworld.js"></script>
 	
 </head>
 <body>
-	<div ng-controller="myCtrl">
+	<div ng-controller="cont2">
 		<h1>{{firstname}}</h1>
 	</div>
 	
-	<h1 ng-controller="helloWorldCtrl">{{msg}}</h1>
+	<div ng-controller="cont2">
+		<h1>{{lastname}}</h1>
+	</div>
+	
+	<!--<div ng-controller="cont1">
+		<h1>{{globalName}}</h1>
+	</div>-->
+	
+	<div ng-controller="cont2">
+		<h1>{{globalName}}</h1>
+	</div>
+	
+	<div ng-controller="cont3">
+		<h1>{{firstname}}</h1>
+	</div>
+	
+	<div ng-controller="cont3">
+		<h1>{{lastname}}</h1>
+	</div>
+	
+	<h1 ng-controller="cont1"> {{mymsg}} </h1>
 </body>
 </html>
+
